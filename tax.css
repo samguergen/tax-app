@@ -139,6 +139,26 @@ canvas{
 	color: rgb(90, 180, 165);
 }
 
+#results-table tr:nth-child(2) th:first-child {
+	background-color: rgb(151, 187, 205);
+}
+
+#results-table tr:nth-child(2) th:nth-child(2) {
+	background-color: rgb(220, 220, 220);
+}
+
+#results-table tr:nth-child(2) th:nth-child(3) {
+	background-color: rgb(247, 70, 74);
+}
+
+#results-table tr:nth-child(2) th:nth-child(4) {
+	background-color: rgb(70, 191, 189);
+}
+
+#results-table tr:nth-child(2) th:nth-child(6) {
+	background-color: rgb(253, 180, 92);
+}
+
 #results-table th {
 	border: 1px solid black;
 }
