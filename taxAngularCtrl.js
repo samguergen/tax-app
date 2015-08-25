@@ -110,9 +110,6 @@ taxCtrl = function($scope){
 
     $scope.federal_tax = function(agi, filing_status, partner_agi){
 
-        console.log('partner agi is');
-        console.log(partner_agi);
-
         single_tiers = [
             {'income': 406750, 'base_tax': 118118.25, 'marginal_tax_rate': 39.6}, 
             {'income': 405100, 'base_tax': 117541.25, 'marginal_tax_rate': 35},
@@ -249,6 +246,8 @@ taxCtrl = function($scope){
     $scope.calculateTax = function(){
 
         $scope.modalShown = false;
+        $scope.showResultsTable = true;
+
 
         $scope.federalTax = $scope.federal_tax($scope.formData.agi, $scope.filingStatus(), $scope.formData.partnerAgi);
         $scope.stateTax = $scope.state_tax($scope.formData.agi, $scope.filingStatus(), $scope.formData.partnerAgi);
@@ -266,7 +265,7 @@ taxCtrl = function($scope){
             $scope.eachJointPost = $scope.postTaxIncome / 2;
         };
 
-        $scope.showResultsTable = true;
+        
 
         $scope.data.push($scope.federalTax);
         $scope.data.push($scope.stateTax);

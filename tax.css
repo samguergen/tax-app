@@ -40,7 +40,7 @@
 }
 
 .page-body {
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 .pure-table {
@@ -100,9 +100,9 @@ canvas{
     position: absolute;
     left: 40%;
     margin-top: 150px;
-    margin-left: -12%;
-    margin-left: 1%;
     position: absolute;
+    margin-left: -20%;
+
 }
 
 #rez-title {
@@ -119,8 +119,9 @@ canvas{
 }
 
 #results {
-	margin-left: 45%;
     position: absolute;
+    margin-left: 25%;
+    margin-top: 20px;
 }
 
 #results-table {
@@ -200,10 +201,12 @@ canvas{
   background-color: #fff;
   box-shadow: 4px 4px 80px #000;
 }
+
 .ng-modal-dialog-content {
   padding:0px;
   text-align: center;
 }
+
 .ng-modal-close {
   position: absolute;
   top: 3px;
