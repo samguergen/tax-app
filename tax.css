@@ -20,6 +20,7 @@
 	float: left;
 	margin-top: -2%;
 	color: rgb(136, 184, 176);
+	font-size: 30px;
 }
 
 #logo img{
@@ -100,9 +101,9 @@ canvas{
     height: auto !important;
     position: absolute;
     left: 40%;
-    margin-top: 30px;
+    margin-top: 80px;
     position: absolute;
-    margin-left: -20%;
+    margin-left: 5%;
 }
 
 #rez-title {
@@ -120,8 +121,9 @@ canvas{
 
 #results {
     position: absolute;
-    margin-top: 380px;
-    margin-left: 50%;
+/*    margin-left: -105%;*/
+    margin-top: 40px;
+    font-size: 12px;
 }}
 
 #results-table {
@@ -129,14 +131,15 @@ canvas{
 	margin: 0% 2% 5% 2%;
     height: 10%;
     font-size: 11px;
+    border: 1px solid grey;
 }
 
 #results-table tr:first-child td {
 	font-weight: bold;
 	font-size: 15px;
-/*	padding: 15px 15px 15px 20px;
+	/*padding: 15px 15px 15px 20px;*/
 	background-color: #cbcbcb;
-	border: 1px solid black;*/
+	border: 1px solid grey;
 	color: rgb(90, 180, 165);
 }
 
@@ -169,8 +172,21 @@ canvas{
 	border: 1px solid black;
 }
 
+#results-table tr:nth-child(3), tr:nth-child(4), tr:last-child{
+	background-color: #f2f2f2;
+	border: 1px solid grey;
+/*	border-top: 1px solid grey;;*/
+}
+
+#results-table tr:nth-child(4) td{
+	padding: 10px;
+}
+
+/*.pure-table-striped tr:nth-child(2n-1) td*/
+
 #each-joint {
 	font-size: 11px;
+	font-style: italic;
 }
 
 .footer {
