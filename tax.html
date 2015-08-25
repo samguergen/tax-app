@@ -7,6 +7,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 
+    <script src="bower_components/Chart.js/Chart.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+
     <script src="taxAngularCtrl.js"></script>	
 
 </head>
@@ -116,6 +120,11 @@
                 </table>
     
      	</div>
+
+
+        <canvas id="pie" class="chart chart-pie" data="data"
+          labels="labels" legend:true> 
+        </canvas> 
 
 
 

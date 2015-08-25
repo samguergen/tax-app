@@ -1,4 +1,4 @@
-var app = angular.module("taxApp", []);
+var app = angular.module("taxApp", ["chart.js"]);
 
 
 taxCtrl = function($scope){
@@ -263,22 +263,43 @@ taxCtrl = function($scope){
             $scope.eachJointPost = $scope.postTaxIncome / 2;
         };
 
+        $scope.data.push($scope.federalTax);
+        $scope.data.push($scope.stateTax);
+        $scope.data.push($scope.medicareTax);
+        $scope.data.push($scope.ficaTax);
+        $scope.data.push($scope.postTaxIncome);
 
-        console.log('Federal Tax is ');
-        console.log($scope.federalTax);
-        console.log('State Tax is ');
-        console.log($scope.stateTax);
-        console.log('Medicare Tax is ');
-        console.log($scope.medicareTax);
-        console.log('FICA Tax is ');
-        console.log($scope.ficaTax);
-        console.log('Personal Exemption Tax is ');
-        console.log($scope.exemption);
-        console.log('Post-Tax Income is ');
-        console.log($scope.postTaxIncome);
+
+        // console.log('Federal Tax is ');
+        // console.log($scope.federalTax);
+        // console.log('State Tax is ');
+        // console.log($scope.stateTax);
+        // console.log('Medicare Tax is ');
+        // console.log($scope.medicareTax);
+        // console.log('FICA Tax is ');
+        // console.log($scope.ficaTax);
+        // console.log('Personal Exemption Tax is ');
+        // console.log($scope.exemption);
+        // console.log('Post-Tax Income is ');
+        // console.log($scope.postTaxIncome);
+
+
+
 
 
     };
+
+      $scope.labels = ["Federal", "State", "Medicare", "FICA", "Post-Tax Income"];
+
+      $scope.data = [];
+
+      $scope.legend = ["this is a legend"];
+
+
+
+
+
+
 
   }
 
