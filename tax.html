@@ -1,0 +1,133 @@
+<html ng-app="taxApp" ng-controller="TaxCtrl">
+<head>
+	<title>Tax Calculator</title>
+    <link rel="stylesheet" type="text/css" href="tax.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+
+    <script src="taxAngularCtrl.js"></script>	
+
+</head>
+<body>
+    <div class="wrapper" >
+        <div class="heading">
+            <h2> Calculate your Tax Payment </h2>
+            <div id="steps">
+                1. Enter your income information
+               <br> 2. If you are filing joint taxes, enter your partner's income information
+               <br> 3. Your tax details will display in the table on the right
+               <br> 4. Your tax details will also display on the bar chart
+               <br> 4. Scroll over each section's title for more information
+            </div>
+            <div id="logo"><img src="images/pv-logo.png"/></div>
+        </div>
+
+        <div class="page-body">
+            <form action="#" class="tax-form" >
+                <!-- <div id="hover-form" ng-show="HoverFormisVisible"> Some details </div> -->
+            <table class="pure-table pure-table-horizontal" >
+                        <tbody id="personal-info">
+            			<tr>
+            				<td colspan="2" ng-mouseover="HoverFormisVisible=true" ng-mouseleave="HoverFormisVisible=false"> Enter your Income information </td>
+            			</tr>
+                        <tr> 
+                            <th>Filing Status</th>
+                            <td><input type="radio" ng-model="formData.filingChoice" ng-value="1"/> Single  
+                            <br><input type="radio" ng-model="formData.filingChoice" ng-value="2"/> Joint 
+                            <br><input type="radio" ng-model="formData.filingChoice" ng-value="3"/> Separate </td>
+                        </tr>
+                        <tr>
+                            <th>Gross Income</th>
+                            <td> <input type="number" ng-model="formData.grossIncome" /> </td>
+                        </tr>
+                        <tr>
+                            <th>Adjusted Gross Income (AGI)</th>
+                            <td> <input type="number" ng-model="formData.agi" /> </td>
+                        </tr>
+
+                        <tr> 
+                            <th>U.S State of Residence</th>
+                            <td><input type="checkbox" ng-model="formData.state" /> New York </td>
+                        </tr>
+                    </tbody>
+
+                        <tbody id="partner-info" ng-show="filingStatus() == 'joint'">
+	                        <tr>
+	                            <th>Partner's Gross Income</th>
+	                            <td> <input type="number" ng-model="formData.partnerGrossIncome" /> </td>
+	                        </tr>
+	                        <tr>
+	                            <th>Partner's Adjusted Gross Income (AGI)</th>
+	                            <td> <input type="number" ng-model="formData.partnerAgi" /> </td>
+	                        </tr>    
+                        </tbody>                    
+
+                        <tr>
+                        	<td colspan="2">
+                                <input class="form-click" type="button" ng-click="reset()" value="Reset"/>
+            					<!-- <input type="submit" value="Submit"/> -->
+                                <input class="form-click" type="button" ng-click="calculateTax()" value="Calculate Taxes"/>
+            				</td>
+                        </tr>          
+
+            </table>
+
+            </form>
+
+
+     	<div id="results">
+				<table class="pure-table pure-table-striped" >
+                    <tbody id="results-table">
+                    	<tr>
+                    		<td colspan="6">Your Tax Details</td>
+                    	</tr>
+                        <tr>
+                            <th>Federal Tax</th>
+                            <th>State Tax</th>
+                            <th>Medicare Tax</th>
+                            <th>FICA Tax</th>
+                            <th>Personal Exemption</th>
+                            <th>Post-Tax Income</th>     
+                        </tr>
+
+                        <tr>
+                            <td>{{ federalTax | currency }}</td>
+                            <td>{{ stateTax | currency }}</td>
+                            <td>{{ medicareTax | currency}}</td>
+                            <td>{{ ficaTax | currency}}</td>
+                            <td>{{ exemption | currency }}</td>
+                            <td>{{ postTaxIncome | currency }}</td>
+                        </tr>  
+                    </tbody>
+
+                        <tbody id="each-joint" ng-show="filingStatus() == 'joint'">
+                            <tr>
+                                <td>{{ eachJointFed | currency }}</td>
+                                <td>{{ eachJointState | currency }}</td>
+                                <td>{{ eachJointMedi | currency}}</td>
+                                <td>{{ eachJointFica | currency}}</td>
+                                <td>{{ eachJointExemption | currency }}</td>
+                                <td>{{ eachJointPost | currency }}</td>
+                            </tr> 
+                        </tbody>   
+
+                </table>
+    
+     	</div>
+
+
+
+
+</div>
+
+	<div class="footer">
+	</div>
+</body>
+
+</html>
+
+
+
+</html>
