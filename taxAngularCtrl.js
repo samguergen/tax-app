@@ -110,9 +110,6 @@ taxCtrl = function($scope){
 
     $scope.federal_tax = function(agi, filing_status, partner_agi){
 
-        console.log('partner agi is');
-        console.log(partner_agi);
-
         single_tiers = [
             {'income': 406750, 'base_tax': 118118.25, 'marginal_tax_rate': 39.6}, 
             {'income': 405100, 'base_tax': 117541.25, 'marginal_tax_rate': 35},
@@ -247,6 +244,11 @@ taxCtrl = function($scope){
 
 
     $scope.calculateTax = function(){
+
+        $scope.modalShown = false;
+        $scope.showResultsTable = true;
+
+
         $scope.federalTax = $scope.federal_tax($scope.formData.agi, $scope.filingStatus(), $scope.formData.partnerAgi);
         $scope.stateTax = $scope.state_tax($scope.formData.agi, $scope.filingStatus(), $scope.formData.partnerAgi);
         $scope.medicareTax = $scope.medicare($scope.totalGrossCalc());
@@ -262,6 +264,8 @@ taxCtrl = function($scope){
             $scope.eachJointExemption = $scope.exemption / 2;
             $scope.eachJointPost = $scope.postTaxIncome / 2;
         };
+
+        
 
         $scope.data.push($scope.federalTax);
         $scope.data.push($scope.stateTax);
@@ -283,10 +287,6 @@ taxCtrl = function($scope){
         // console.log('Post-Tax Income is ');
         // console.log($scope.postTaxIncome);
 
-
-
-
-
     };
 
       $scope.labels = ["Federal", "State", "Medicare", "FICA", "Post-Tax Income"];
@@ -296,16 +296,40 @@ taxCtrl = function($scope){
       $scope.legend = ["this is a legend"];
 
 
+      $scope.modalShown = false;
 
-
-
-
+    $scope.toggleModal = function() {
+        $scope.modalShown = !$scope.modalShown;
+     };
 
   }
 
 
 
  app.controller("TaxCtrl", ['$scope', taxCtrl] );
+
+
+ app.directive('modalDialog', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      show: '='
+    },
+    replace: true, 
+    transclude: true, 
+    link: function(scope, element, attrs) {
+      scope.dialogStyle = {};
+      // if (attrs.width)
+      //   scope.dialogStyle.width = attrs.width;
+      // if (attrs.height)
+      //   scope.dialogStyle.height = attrs.height;
+      scope.hideModal = function() {
+        scope.show = false;
+      };
+    },
+    template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
+  };
+});
 
 
 

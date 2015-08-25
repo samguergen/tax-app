@@ -20,6 +20,7 @@
 	float: left;
 	margin-top: -2%;
 	color: rgb(136, 184, 176);
+	font-size: 30px;
 }
 
 #logo img{
@@ -40,7 +41,7 @@
 }
 
 .page-body {
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 .pure-table {
@@ -49,11 +50,12 @@
 	float: left;
 	height: 60px;
 	font-size: 13px;
+	background-color: #F1F7F5;
 }
 
 .pure-table-horizontal{
-	margin-left: 2%;
-	margin-right: 2%;
+	margin-top: -16px;
+    margin-left: -1px;
 }
 
 .pure-table-horizontal input[type="number"]{
@@ -99,10 +101,9 @@ canvas{
     height: auto !important;
     position: absolute;
     left: 40%;
-    margin-top: 150px;
-    margin-left: -12%;
-    margin-left: 1%;
+    margin-top: 80px;
     position: absolute;
+    margin-left: 5%;
 }
 
 #rez-title {
@@ -119,23 +120,26 @@ canvas{
 }
 
 #results {
-	margin-left: 45%;
     position: absolute;
-}
+/*    margin-left: -105%;*/
+    margin-top: 40px;
+    font-size: 12px;
+}}
 
 #results-table {
 	width: 50%;
 	margin: 0% 2% 5% 2%;
     height: 10%;
     font-size: 11px;
+    border: 1px solid grey;
 }
 
 #results-table tr:first-child td {
 	font-weight: bold;
 	font-size: 15px;
-	padding: 15px 15px 15px 20px;
+	/*padding: 15px 15px 15px 20px;*/
 	background-color: #cbcbcb;
-	border: 1px solid black;
+	border: 1px solid grey;
 	color: rgb(90, 180, 165);
 }
 
@@ -168,10 +172,76 @@ canvas{
 	border: 1px solid black;
 }
 
+#results-table tr:nth-child(3), tr:nth-child(4), tr:last-child{
+	background-color: #f2f2f2;
+	border: 1px solid grey;
+/*	border-top: 1px solid grey;;*/
+}
+
+#results-table tr:nth-child(4) td{
+	padding: 10px;
+}
+
+/*.pure-table-striped tr:nth-child(2n-1) td*/
+
 #each-joint {
 	font-size: 11px;
+	font-style: italic;
 }
 
 .footer {
 	clear: both;
 }
+
+.ng-modal-overlay {
+  position:absolute;
+  z-index:9999;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#000000;
+  opacity: 0.6;
+}
+
+.ng-modal-dialog {
+  z-index:10000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 270px;
+  height: 40%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  background-color: #F1F7F5;
+  box-shadow: 4px 4px 80px #000;
+}
+
+.ng-modal-dialog-content {
+  padding:0px;
+  text-align: center;
+ /* background-color: pink;*/
+}
+
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif';
+}
+
+/*#toggler {
+	margin-left: 0%;
+}
+
+
+table.center {
+	margin-left: auto;
+	margin-right: auto;
+}*/
