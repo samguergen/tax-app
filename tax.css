@@ -155,6 +155,11 @@ canvas{
 	background-color: rgb(70, 191, 189);
 }
 
+#results-table tr:nth-child(2) th:nth-child(5) {
+	font-style: italic;
+	font-weight: normal;
+}
+
 #results-table tr:nth-child(2) th:nth-child(6) {
 	background-color: rgb(253, 180, 92);
 }
