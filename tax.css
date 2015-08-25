@@ -120,7 +120,7 @@ canvas{
 
 #results {
     position: absolute;
-    margin-top: 400px;
+    margin-top: 380px;
     margin-left: 50%;
 }}
 
@@ -134,9 +134,9 @@ canvas{
 #results-table tr:first-child td {
 	font-weight: bold;
 	font-size: 15px;
-	padding: 15px 15px 15px 20px;
+/*	padding: 15px 15px 15px 20px;
 	background-color: #cbcbcb;
-	border: 1px solid black;
+	border: 1px solid black;*/
 	color: rgb(90, 180, 165);
 }
 
