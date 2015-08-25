@@ -1,4 +1,4 @@
-var app = angular.module("taxApp", []);
+var app = angular.module("taxApp", ["chart.js"]);
 
 
 taxCtrl = function($scope){
