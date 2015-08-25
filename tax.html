@@ -29,8 +29,14 @@
         </div>
 
         <div class="page-body">
-            <form action="#" class="tax-form" >
-                <!-- <div id="hover-form" ng-show="HoverFormisVisible"> Some details </div> -->
+            <button ng-click='toggleModal()'>Open Modal Dialog</button>
+            <modal-dialog show='modalShown' width='400px' height='60%'>
+                <p>Modal Content Goes here<p>
+            </modal-dialog>
+             <!-- <form action="#" class="tax-form" >
+                 <div id="hover-form" ng-show="HoverFormisVisible"> Some details </div>
+
+ 
             <table class="pure-table pure-table-horizontal" >
                         <tbody id="personal-info">
             			<tr>
@@ -71,14 +77,14 @@
                         <tr>
                         	<td colspan="2">
                                 <input class="form-click" type="button" ng-click="reset()" value="Reset"/>
-            					<!-- <input type="submit" value="Submit"/> -->
+            					
                                 <input class="form-click" type="button" ng-click="calculateTax()" value="Calculate Taxes"/>
             				</td>
                         </tr>          
 
             </table>
 
-            </form>
+            </form>  -->
 
 
      	<div id="results">
