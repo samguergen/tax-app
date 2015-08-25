@@ -263,6 +263,8 @@ taxCtrl = function($scope){
             $scope.eachJointPost = $scope.postTaxIncome / 2;
         };
 
+        $scope.showResults = true;
+
         $scope.data.push($scope.federalTax);
         $scope.data.push($scope.stateTax);
         $scope.data.push($scope.medicareTax);
