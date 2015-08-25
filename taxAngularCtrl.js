@@ -289,18 +289,24 @@ taxCtrl = function($scope){
 
     };
 
-      $scope.labels = ["Federal", "State", "Medicare", "FICA", "Post-Tax Income"];
+    $scope.labels = ["Federal", "State", "Medicare", "FICA", "Post-Tax Income"];
 
-      $scope.data = [];
+    $scope.data = [];
 
-      $scope.legend = ["this is a legend"];
+    $scope.legend = ["this is a legend"];
 
 
-      $scope.modalShown = false;
+    $scope.modalShown = false;
 
     $scope.toggleModal = function() {
         $scope.modalShown = !$scope.modalShown;
      };
+
+    $scope.nextModal = function(){
+
+    };
+
+
 
   }
 
@@ -327,7 +333,7 @@ taxCtrl = function($scope){
         scope.show = false;
       };
     },
-    template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
+    template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div><div class='ng-modal-next' ng-click='nextModal()'>next</div></div></div>"
   };
 });
 
