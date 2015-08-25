@@ -49,6 +49,7 @@
 	float: left;
 	height: 60px;
 	font-size: 13px;
+	background-color: #F1F7F5;
 }
 
 .pure-table-horizontal{
@@ -198,13 +199,14 @@ canvas{
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: #F1F7F5;
   box-shadow: 4px 4px 80px #000;
 }
 
 .ng-modal-dialog-content {
   padding:0px;
   text-align: center;
+ /* background-color: pink;*/
 }
 
 .ng-modal-close {
