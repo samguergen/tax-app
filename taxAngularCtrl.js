@@ -278,7 +278,24 @@ taxCtrl = function($scope){
         console.log($scope.postTaxIncome);
 
 
+        $scope.data.push($scope.federalTax);
+        $scope.data.push($scope.stateTax);
+        $scope.data.push($scope.medicareTax);
+        $scope.data.push($scope.ficaTax);
+        $scope.data.push($scope.postTaxIncome);
+
+
     };
+
+      $scope.labels = ["Federal", "State", "Medicare", "FICA", "Post-Tax Income"];
+
+      $scope.data = [];
+
+
+
+
+
+
 
   }
 
