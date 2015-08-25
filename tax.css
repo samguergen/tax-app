@@ -98,6 +98,8 @@ canvas{
     height: auto !important;
     position: absolute;
     left: 40%;
+    margin-top: 150px;
+    margin-left: -12%;
 }
 
 #x-axis{
