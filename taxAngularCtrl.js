@@ -293,6 +293,8 @@ taxCtrl = function($scope){
 
       $scope.data = [];
 
+      $scope.legend = ["this is a legend"];
+
 
 
 
