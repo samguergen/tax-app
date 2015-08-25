@@ -29,10 +29,10 @@
         </div>
 
         <div class="page-body">
-            <button ng-click='toggleModal()'>Click here to enter your income information.</button>
+            <button id="toggler" ng-click='toggleModal()'>Click here to enter your income information.</button>
             <modal-dialog show='modalShown' width='400px' height='60%'>
                 <form action="#" class="tax-form" >
-                 <div id="hover-form" ng-show="HoverFormisVisible"> Some details </div>
+                 <!-- <div id="hover-form" ng-show="HoverFormisVisible"> Some details </div> -->
 
  
             <table class="pure-table pure-table-horizontal" >
@@ -81,17 +81,19 @@
                         </tr>          
 
             </table>
-
             </form>
 
             </modal-dialog>
              <!--     <div id="hover-form" ng-show="HoverFormisVisible"> Some details </div> -->
 
 
+        <canvas id="pie" class="chart chart-pie" data="data"
+          labels="labels" legend:true> 
+        </canvas> 
 
 
      	<div id="results" ng-show="showResultsTable">
-				<table class="pure-table pure-table-striped" >
+				<table class="pure-table pure-table-striped center" >
                     <tbody id="results-table">
                     	<tr>
                     		<td colspan="6">Your Tax Details</td>
@@ -129,14 +131,6 @@
                 </table>
     
      	</div>
-
-
-        <canvas id="pie" class="chart chart-pie" data="data"
-          labels="labels" legend:true> 
-        </canvas> 
-
-
-
 
 </div>
 

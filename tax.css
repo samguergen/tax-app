@@ -100,10 +100,9 @@ canvas{
     height: auto !important;
     position: absolute;
     left: 40%;
-    margin-top: 150px;
+    margin-top: 30px;
     position: absolute;
     margin-left: -20%;
-
 }
 
 #rez-title {
@@ -121,9 +120,9 @@ canvas{
 
 #results {
     position: absolute;
-    margin-left: 25%;
-    margin-top: 20px;
-}
+    margin-top: 400px;
+    margin-left: 50%;
+}}
 
 #results-table {
 	width: 50%;
@@ -220,3 +219,13 @@ canvas{
   font-weight: bold;
   font-family: 'arial', 'sans-serif';
 }
+
+/*#toggler {
+	margin-left: 0%;
+}
+
+
+table.center {
+	margin-left: auto;
+	margin-right: auto;
+}*/
