@@ -247,6 +247,9 @@ taxCtrl = function($scope){
 
 
     $scope.calculateTax = function(){
+
+        $scope.modalShown = false;
+
         $scope.federalTax = $scope.federal_tax($scope.formData.agi, $scope.filingStatus(), $scope.formData.partnerAgi);
         $scope.stateTax = $scope.state_tax($scope.formData.agi, $scope.filingStatus(), $scope.formData.partnerAgi);
         $scope.medicareTax = $scope.medicare($scope.totalGrossCalc());
@@ -263,7 +266,7 @@ taxCtrl = function($scope){
             $scope.eachJointPost = $scope.postTaxIncome / 2;
         };
 
-        $scope.showResults = true;
+        $scope.showResultsTable = true;
 
         $scope.data.push($scope.federalTax);
         $scope.data.push($scope.stateTax);
@@ -300,17 +303,11 @@ taxCtrl = function($scope){
         $scope.modalShown = !$scope.modalShown;
      };
 
-
-
-
-
   }
 
 
 
  app.controller("TaxCtrl", ['$scope', taxCtrl] );
-
-
 
 
  app.directive('modalDialog', function() {
