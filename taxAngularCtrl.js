@@ -301,6 +301,11 @@ taxCtrl = function($scope){
     $scope.nextModal = function(){
         $scope.slide += 1;
     };
+
+    $scope.onFedFunc = function(){
+        $scope.onFedHover = true;
+        console.log('Hover is working!');
+    }
   }
 
 

@@ -254,7 +254,9 @@ canvas{
 
 
 .info-pop {
-
+	background-color:red;
+	position: absolute;
+	/*margin-top: 200px;*/
 }
 
 #fed-pop {
@@ -278,7 +280,7 @@ canvas{
 }
 
 #post-pop {
-	
+
 }
 
 
