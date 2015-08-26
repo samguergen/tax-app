@@ -246,7 +246,8 @@ taxCtrl = function($scope){
 
     $scope.calculateTax = function(){
 
-        $scope.modalShown = false;
+        // $scope.modalShown = false;
+        $scope.toggleModal();
         $scope.showResultsTable = true;
 
 
