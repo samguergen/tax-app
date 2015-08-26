@@ -6,7 +6,6 @@ taxCtrl = function($scope){
     console.log('in da controller');
     $scope.formData = {};
     $scope.fica_cap = 117000;
-
     $scope.slide = 1;
 
 
@@ -310,9 +309,6 @@ taxCtrl = function($scope){
     };     
 
     $scope.nextModal = function(){
-        if ($scope.slide == 6){
-            $scope.slide = 1;
-        };
         $scope.slide += 1;
     };
   }
