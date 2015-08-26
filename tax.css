@@ -243,12 +243,12 @@ canvas{
 #tax-form-title {
   font-size: 16px;
   font-weight: bold;
-  padding: 15px;
+  padding: 25px;
 }
 
 .tax-form-section {
 	text-align: left;
-	padding: 10px;
+	padding: 0px 20px 20px 20px;
 	font-size: 13px;
 }
 
