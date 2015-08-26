@@ -46,21 +46,23 @@
                         
                     <div class="tax-form-section" ng-show="slide == 2"> 2) Gross Income 
                             <br><input type="number" ng-model="formData.grossIncome" />
-                            <br>3) Adjusted Gross Income (AGI)
+                    </div>
+                            
+                    <div class="tax-form-section" ng-show="slide == 3"> 3) Adjusted Gross Income (AGI)
                             <br><input type="number" ng-model="formData.agi" />                    
                     </div>
 
-                    <div class="tax-form-section" ng-show="slide == 3"> 4) U.S State of Residence
+                    <div class="tax-form-section" ng-show="slide == 4"> 4) U.S State of Residence
                             <br><input type="checkbox" ng-model="formData.state" /> New York
                     </div>
                     
-                    <div class="tax-form-section" ng-show="slide == 4">
+                    <div class="tax-form-section" ng-show="slide == 5">
                         <!-- <tbody id="partner-info" ng-show="filingStatus() == 'joint'"> -->
                                 5) Partner's Gross Income
                                 <br><input type="number" ng-model="formData.partnerGrossIncome" />
                     </div>
 
-                    <div class="tax-form-section" ng-show="slide == 5"> 6) Partner's Adjusted Gross Income (AGI)
+                    <div class="tax-form-section" ng-show="slide == 6"> 6) Partner's Adjusted Gross Income (AGI)
                                 <br><input type="number" ng-model="formData.partnerAgi" />
                     
                             <!-- <td colspan="2">
@@ -70,7 +72,7 @@
                     </div>         
 
 
-            <button id="next" ng-hide="slide == 5" ng-click="nextModal()"> Next </button>
+            <button id="next" ng-hide="slide == 6" ng-click="nextModal()"> Next </button>
 
             </modal-dialog>
 

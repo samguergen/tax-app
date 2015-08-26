@@ -306,7 +306,7 @@ taxCtrl = function($scope){
      };
 
     $scope.nextModal = function(){
-        if ($scope.slide == 5){
+        if ($scope.slide == 6){
             $scope.slide = 1;
         };
         $scope.slide += 1;
