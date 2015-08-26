@@ -230,8 +230,8 @@ canvas{
 #tax-form-title {
   font-size: 16px;
   font-weight: bold;
-  margin: 20px;
-  padding: 5px;
+  margin: 25px;
+  padding: 10px;
   background-color: #cbcbcb;
   color: rgb(90, 180, 165);
 }
@@ -257,6 +257,12 @@ canvas{
 
 #next {
 	margin-left: 10px;
+}
+
+.partner-opt {
+	font-style: italic;
+	font-size: 11px;
+	padding: 3px;
 }
 
 
