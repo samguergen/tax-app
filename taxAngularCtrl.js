@@ -302,6 +302,7 @@ taxCtrl = function($scope){
 
     $scope.toggleModal = function() {
         $scope.modalShown = !$scope.modalShown;
+        $scope.slide = 1;
      };
 
     $scope.nextModal = function(){
