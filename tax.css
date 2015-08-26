@@ -92,7 +92,7 @@
 
 canvas{
     width: 100% !important;
-    max-width: 637px;
+    max-width: 720px;
     height: auto !important;
     position: absolute;
     left: 40%;
@@ -116,21 +116,22 @@ canvas{
 
 #results {
     position: absolute;
-    margin-top: 40px;
+    margin-top: 90px;
+    margin-left: 5%;
     font-size: 12px;
 }
 
 #results-table {
-	width: 50%;
+	width: 60%;
 	margin: 0% 2% 5% 2%;
-    height: 10%;
-    font-size: 11px;
+    height: 20%;
+    font-size: 13px;
     border: 1px solid grey;
 }
 
 #results-table tr:first-child td {
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 17px;
 	/*padding: 15px 15px 15px 20px;*/
 	background-color: #cbcbcb;
 	border: 1px solid grey;
@@ -169,6 +170,7 @@ canvas{
 #results-table tr:nth-child(3), tr:nth-child(4), tr:last-child{
 	background-color: #f2f2f2;
 	border: 1px solid grey;
+	padding: 15px;
 }
 
 #results-table tr:nth-child(4) td{
