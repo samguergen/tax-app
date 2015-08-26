@@ -21,7 +21,7 @@
             <div id="steps">
                 1. Enter your income information in the modal windows.
                <br> 2. If you are filing joint taxes, enter your partner's information as well.
-               <br> 3. Select 'Calculate your Taxes' in the last window to display your tax details.
+               <br> 3. Select 'Calculate Taxes' in the last window to display your tax details.
                <br> 4. A table and bar chart will then appear with details about your tax information.
                <br> 5. Scroll over each section's title for more information
             </div>
@@ -67,13 +67,15 @@
                                 <p><input type="number" ng-model="formData.partnerAgi" /></p>
                     
                             <!-- <td colspan="2">
-                                <input class="form-submit" type="button" ng-click="reset()" value="Reset"/> -->
-                                
-                                <p><center><input class="form-submit" type="button" ng-click="calculateTax()" value="Calculate Taxes"/></center></p>
-                    </div>         
+                                <input type="button" ng-click="reset()" value="Reset"/> -->
+        
+                    </div> 
 
-            <button id="previous" ng-hide="slide == 1" ng-click="previousModal()"> Previous </button>        
-            <button id="next" ng-hide="slide == 6" ng-click="nextModal()"> Next </button>
+
+            <button id="previous" ng-hide="slide == 1" ng-click="previousModal()"> previous </button>        
+            <button id="next" ng-hide="slide == 6" ng-click="nextModal()"> next </button>
+
+            <p><button id="form-submit" ng-show="slide == 6" ng-click="calculateTax()"> Calculate Taxes </button></p>
 
             </modal-dialog>
 
