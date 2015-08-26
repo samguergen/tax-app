@@ -282,7 +282,7 @@ taxCtrl = function($scope){
     };
 
 
-    $scope.labels = ["Federal ($)", "State ($)", "Medicare ($)", "FICA ($)", "Post-Tax Income ($)"];
+    $scope.labels = [["Federal ($)", "fed blah"], ["State ($)", "state blah"], ["Medicare ($)", "medi blah"], ["FICA ($)", "fica blah"], ["Post-Tax Income ($)", "post blah"]];
 
     $scope.data = [];
 
