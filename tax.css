@@ -255,9 +255,8 @@ canvas{
 
 .info-pop {
 	position: absolute;
-	margin-top: -600px;
+	margin-top: -605px;
 	margin-left: 10%;
-	/*width: 30%;*/
 	padding: 10px;
 	width: 250px;
 	height: 200px;
@@ -301,23 +300,27 @@ canvas{
 }
 
 #state-pop {
-
+	margin-left: 16%;
 }
 
 #med-pop {
-
+	height: 130px;
+	margin-left: 22%;
 }
 
 #fica-pop {
-
+	height: 150px;
+	margin-left: 28%;
 }
 
 #pe-pop {
-
+	height: 220px;
+	margin-left: 34%;
 }
 
 #post-pop {
-
+	height: 40px;
+	margin-left: 40%;
 }
 
 
