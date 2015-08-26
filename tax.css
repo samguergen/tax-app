@@ -230,7 +230,10 @@ canvas{
 #tax-form-title {
   font-size: 16px;
   font-weight: bold;
-  padding: 25px;
+  margin: 20px;
+  padding: 5px;
+  background-color: #cbcbcb;
+  color: rgb(90, 180, 165);
 }
 
 .tax-form-section {
@@ -241,7 +244,7 @@ canvas{
 
 .tax-form-section input {
 	margin: 5px;
-	margin-left: 20%;
+	/*margin-left: 20%;*/
 }
 
 .tax-form-section:last-child p:last-child{
