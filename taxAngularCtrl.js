@@ -282,7 +282,7 @@ taxCtrl = function($scope){
     };
 
 
-    $scope.labels = [["Tax levied by the IRS on your annual earnings, such as employment earnings or capital gains. /\n/ Federal ($)"], ["Tax levied on income at the state level. Has its own set of deductions and credits for certain activities. /\n/ State ($)" ], ["Tax deducted from the wages of every legally working American, pays for the Medicare program for individuals over 65. /\n/ Medicare ($)"], ["Tax going towards Social Security and Medicare. Both employees and employers must share this payments. /\n/ FICA ($)"], ["Your income after all the aforementioned taxes are deducted /\n/ Post-Tax Income ($)"]];
+    $scope.labels = ["Federal ($)", "State ($)" , "Medicare ($)", "FICA ($)", "Post-Tax Income ($)"];
 
     $scope.data = [];
 
