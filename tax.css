@@ -207,6 +207,7 @@ canvas{
   -moz-transform: translate(-50%, -50%);
   background-color: #F1F7F5;
   box-shadow: 4px 4px 80px #000;
+  border: 2px solid grey;
 }
 
 .ng-modal-dialog-content {
