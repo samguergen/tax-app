@@ -237,14 +237,18 @@ canvas{
 }
 
 .ng-modal-next {
-	
+
 }
-/*#toggler {
-	margin-left: 0%;
+
+#tax-form-title {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px;
 }
 
 
-table.center {
-	margin-left: auto;
-	margin-right: auto;
-}*/
+
+
+
+
+
