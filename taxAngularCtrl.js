@@ -7,6 +7,8 @@ taxCtrl = function($scope){
     $scope.formData = {};
     $scope.fica_cap = 117000;
 
+    $scope.slide = 0;
+
 
     $scope.reset = function(){
         $scope.formData = "";
@@ -303,8 +305,7 @@ taxCtrl = function($scope){
      };
 
     $scope.nextModal = function(){
-        nextModal += 1
-
+        $scope.slide += 1;
     };
 
 
