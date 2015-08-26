@@ -240,6 +240,7 @@ canvas{
 
 .tax-form-section input {
 	margin: 5px;
+	margin-left: 20%;
 }
 
 .tax-form-section:last-child p:last-child{
