@@ -38,32 +38,32 @@
                 <div id="tax-form">
                     <div id="tax-form-title">  Enter your Income Information </div>
   
-                    <div class="tax-form-section" ng-show="slide == 1"> 1. Filing Status
+                    <div class="tax-form-section" ng-show="slide == 1"><b> 1. Filing Status </b>
                             <p><input type="radio" ng-model="formData.filingChoice" ng-value="1"/> Single  
                             <br><input type="radio" ng-model="formData.filingChoice" ng-value="2"/> Joint 
                             <br><input type="radio" ng-model="formData.filingChoice" ng-value="3"/> Separate 
                             </p>
                     </div>
                         
-                    <div class="tax-form-section" ng-show="slide == 2"> 2. Gross Income 
+                    <div class="tax-form-section" ng-show="slide == 2"><b> 2. Gross Income </b>
                             <p><input type="number" ng-model="formData.grossIncome" /></p>
                     </div>
                             
-                    <div class="tax-form-section" ng-show="slide == 3"> 3. Adjusted Gross Income (AGI)
+                    <div class="tax-form-section" ng-show="slide == 3"><b> 3. Adjusted Gross Income (AGI) </b>
                             <p><input type="number" ng-model="formData.agi" /></p>                    
                     </div>
 
-                    <div class="tax-form-section" ng-show="slide == 4"> 4. U.S State of Residence
+                    <div class="tax-form-section" ng-show="slide == 4"><b> 4. U.S State of Residence </b>
                             <p><input type="checkbox" ng-model="formData.state" /> New York </p>
                     </div>
                     
                     <div class="tax-form-section" ng-show="slide == 5">
                         <!-- <tbody id="partner-info" ng-show="filingStatus() == 'joint'"> -->
-                                5. Partner's Gross Income
+                                <b> 5. Spouse's Gross Income </b>
                                 <p><input type="number" ng-model="formData.partnerGrossIncome" /></p>
                     </div>
 
-                    <div class="tax-form-section" ng-show="slide == 6"> 6. Partner's Adjusted Gross Income (AGI)
+                    <div class="tax-form-section" ng-show="slide == 6"><b> 6. Spouse's AGI </b>
                                 <p><input type="number" ng-model="formData.partnerAgi" /></p>
                     
                             <!-- <td colspan="2">
