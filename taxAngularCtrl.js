@@ -246,7 +246,6 @@ taxCtrl = function($scope){
 
     $scope.calculateTax = function(){
 
-        // $scope.modalShown = false;
         $scope.toggleModal();
         $scope.showResultsTable = true;
 
@@ -258,6 +257,12 @@ taxCtrl = function($scope){
         $scope.exemption = $scope.peCalc($scope.formData.agi, $scope.filingStatus(), $scope.formData.partnerAgi);
         $scope.postTaxIncome = $scope.totalGrossCalc()- $scope.federalTax - $scope.stateTax - $scope.medicareTax - $scope.ficaTax
 
+        $scope.roundFederalTax = ($scope.federalTax).toFixed(2);
+        $scope.roundStateTax = ($scope.stateTax).toFixed(2);
+        $scope.roundMedicareTax = ($scope.medicareTax).toFixed(2);
+        $scope.roundFicaTax = ($scope.ficaTax).toFixed(2);
+        $scope.roundPostTax = ($scope.postTaxIncome).toFixed(2);
+
         if (($scope.filingStatus() == 'joint') && $scope.formData.partnerGrossIncome){
             $scope.eachJointFed = $scope.federalTax / 2;
             $scope.eachJointState = $scope.stateTax / 2;
@@ -267,37 +272,19 @@ taxCtrl = function($scope){
             $scope.eachJointPost = $scope.postTaxIncome / 2;
         };
 
-        
-
-        $scope.data.push($scope.federalTax);
-        $scope.data.push($scope.stateTax);
-        $scope.data.push($scope.medicareTax);
-        $scope.data.push($scope.ficaTax);
-        $scope.data.push($scope.postTaxIncome);
-
-
-        // console.log('Federal Tax is ');
-        // console.log($scope.federalTax);
-        // console.log('State Tax is ');
-        // console.log($scope.stateTax);
-        // console.log('Medicare Tax is ');
-        // console.log($scope.medicareTax);
-        // console.log('FICA Tax is ');
-        // console.log($scope.ficaTax);
-        // console.log('Personal Exemption Tax is ');
-        // console.log($scope.exemption);
-        // console.log('Post-Tax Income is ');
-        // console.log($scope.postTaxIncome);
+    
+        $scope.data.push($scope.roundFederalTax);
+        $scope.data.push($scope.roundStateTax);
+        $scope.data.push($scope.roundMedicareTax);
+        $scope.data.push($scope.roundFicaTax);
+        $scope.data.push($scope.roundPostTax);
 
     };
 
-    
 
     $scope.labels = ["Federal", "State", "Medicare", "FICA", "Post-Tax Income"];
 
     $scope.data = [];
-
-    // $scope.legend = ["this is a legend"];
 
 
     $scope.modalShown = false;
