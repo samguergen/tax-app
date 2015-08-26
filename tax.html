@@ -19,72 +19,71 @@
         <div class="heading">
             <h2> Calculate your Tax Payment </h2>
             <div id="steps">
-                1. Enter your income information
-               <br> 2. Enter your partner's income information if filing joint taxes.
-               <br> 3. Your tax details will display in the table on the right
-               <br> 4. Your tax details will also display on the bar chart
-               <br> 4. Scroll over each section's title for more information
+                1. Enter your income information in the modal windows.
+               <br> 2. If you are filing joint taxes, enter your partner's information as well.
+               <br> 3. Select 'Calculate Your Taxes' in the last window to display your tax details.
+               <br> 4. A table and bar chart will then appear with details about your tax information.
+               <br> 5. Scroll over each section's title for more information
             </div>
             <div id="logo"><img src="images/pv-logo.png"/></div>
         </div>
 
         <div class="page-body">
-            <button id="toggler" ng-click='toggleModal()'>Click here to enter your income information.</button>
+            <button id="toggler" ng-click='toggleModal()'>Click here to enter your income information</button>
             <modal-dialog show='modalShown' width='400px' height='60%'>
-                <form action="#" class="tax-form" >
+                
                  <!-- <div id="hover-form" ng-show="HoverFormisVisible"> Some details </div> -->
 
  
-            <table class="pure-table pure-table-horizontal" >
-                        <tbody id="personal-info">
-                        <tr>
-                            <td colspan="2" ng-mouseover="HoverFormisVisible=true" ng-mouseleave="HoverFormisVisible=false"> Enter your Income information </td>
-                        </tr>
-                        <tr> 
-                            <th>Filing Status</th>
-                            <td><input type="radio" ng-model="formData.filingChoice" ng-value="1"/> Single  
+                <div id="tax-form">
+                    <div id="tax-form-title">  Your Income Information </div>
+  
+                    <div class="tax-form-section" ng-show="slide == 1"><b> 1. Filing Status </b>
+                            <p><input type="radio" ng-model="formData.filingChoice" ng-value="1"/> Single  
                             <br><input type="radio" ng-model="formData.filingChoice" ng-value="2"/> Joint 
-                            <br><input type="radio" ng-model="formData.filingChoice" ng-value="3"/> Separate </td>
-                        </tr>
-                        <tr>
-                            <th>Gross Income</th>
-                            <td> <input type="number" ng-model="formData.grossIncome" /> </td>
-                        </tr>
-                        <tr>
-                            <th>Adjusted Gross Income (AGI)</th>
-                            <td> <input type="number" ng-model="formData.agi" /> </td>
-                        </tr>
+                            <br><input type="radio" ng-model="formData.filingChoice" ng-value="3"/> Separate 
+                            </p>
+                    </div>
+                        
+                    <div class="tax-form-section" ng-show="slide == 2">
+                        <b> 2. Gross Income </b>
+                        <p><input type="number" ng-model="formData.grossIncome" /></p>
+                    </div>
+                            
+                    <div class="tax-form-section" ng-show="slide == 3">
+                        <b> 3. Adjusted Gross Income (AGI) </b>
+                        <p><input type="number" ng-model="formData.agi" /></p>                    
+                    </div>
 
-                        <tr> 
-                            <th>U.S State of Residence</th>
-                            <td><input type="checkbox" ng-model="formData.state" /> New York </td>
-                        </tr>
-                    </tbody>
+                    <div class="tax-form-section" ng-show="slide == 4">
+                        <b> 4. U.S State of Residence </b>
+                        <p><input type="checkbox" ng-model="formData.state" /> New York </p>
+                    </div>
+                    
+                    <div class="tax-form-section" ng-show="slide == 5">
+                        <!-- <tbody id="partner-info" ng-show="filingStatus() == 'joint'"> -->
+                        <b> 5. Spouse's Gross Income </b>
+                        <p><input type="number" ng-model="formData.partnerGrossIncome" />*</p>
+                        <div class="partner-opt">*Fill in only if you are filing joint taxes</div>
+                    </div>
 
-                        <tbody id="partner-info" ng-show="filingStatus() == 'joint'">
-                            <tr>
-                                <th>Partner's Gross Income</th>
-                                <td> <input type="number" ng-model="formData.partnerGrossIncome" /> </td>
-                            </tr>
-                            <tr>
-                                <th>Partner's Adjusted Gross Income (AGI)</th>
-                                <td> <input type="number" ng-model="formData.partnerAgi" /> </td>
-                            </tr>    
-                        </tbody>                    
+                    <div class="tax-form-section" ng-show="slide == 6">
+                        <b> 6. Spouse's AGI </b>
+                        <p><input type="number" ng-model="formData.partnerAgi" />*</p>
+                        <div class="partner-opt">*Fill in only if you are filing joint taxes</div>
+                    </div> 
 
-                        <tr>
-                            <td colspan="2">
-                                <input class="form-click" type="button" ng-click="reset()" value="Reset"/>
-                                
-                                <input class="form-click" type="button" ng-click="calculateTax()" value="Calculate Taxes"/>
-                            </td>
-                        </tr>          
+                            <!-- <td colspan="2">
+                                <input type="button" ng-click="reset()" value="Reset"/> -->
 
-            </table>
-            </form>
+            <button id="previous" ng-hide="slide == 1" ng-click="previousModal()"> previous </button>        
+            <button id="next" ng-hide="slide == 6" ng-click="nextModal()"> next </button>
+
+            <p><button id="form-submit" ng-show="slide == 6" ng-click="calculateTax()"> Calculate Your Taxes </button></p>
+
+        </div>
 
             </modal-dialog>
-             <!--     <div id="hover-form" ng-show="HoverFormisVisible"> Some details </div> -->
 
 
         <canvas id="pie" class="chart chart-pie" data="data"

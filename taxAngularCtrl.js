@@ -6,6 +6,7 @@ taxCtrl = function($scope){
     console.log('in da controller');
     $scope.formData = {};
     $scope.fica_cap = 117000;
+    $scope.slide = 1;
 
 
     $scope.reset = function(){
@@ -245,7 +246,8 @@ taxCtrl = function($scope){
 
     $scope.calculateTax = function(){
 
-        $scope.modalShown = false;
+        // $scope.modalShown = false;
+        $scope.toggleModal();
         $scope.showResultsTable = true;
 
 
@@ -289,19 +291,27 @@ taxCtrl = function($scope){
 
     };
 
-      $scope.labels = ["Federal", "State", "Medicare", "FICA", "Post-Tax Income"];
+    $scope.labels = ["Federal", "State", "Medicare", "FICA", "Post-Tax Income"];
 
-      $scope.data = [];
+    $scope.data = [];
 
-      $scope.legend = ["this is a legend"];
+    $scope.legend = ["this is a legend"];
 
 
-      $scope.modalShown = false;
+    $scope.modalShown = false;
 
     $scope.toggleModal = function() {
         $scope.modalShown = !$scope.modalShown;
+        $scope.slide = 1;
      };
 
+    $scope.previousModal = function(){
+        $scope.slide -= 1;
+    };     
+
+    $scope.nextModal = function(){
+        $scope.slide += 1;
+    };
   }
 
 
@@ -319,15 +329,11 @@ taxCtrl = function($scope){
     transclude: true, 
     link: function(scope, element, attrs) {
       scope.dialogStyle = {};
-      // if (attrs.width)
-      //   scope.dialogStyle.width = attrs.width;
-      // if (attrs.height)
-      //   scope.dialogStyle.height = attrs.height;
       scope.hideModal = function() {
         scope.show = false;
       };
     },
-    template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
+    template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>x</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
   };
 });
 

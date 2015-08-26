@@ -71,13 +71,8 @@
 	color: rgb(90, 180, 165);
 }
 
-.form-click{
-	margin-left: 20px;
-}
-
 #partner-info tr:first-child td{
 	border-top: 1px solid #cbcbcb;
-
 }
 
 #graph-title{
@@ -97,7 +92,7 @@
 
 canvas{
     width: 100% !important;
-    max-width: 637px;
+    max-width: 720px;
     height: auto !important;
     position: absolute;
     left: 40%;
@@ -107,7 +102,7 @@ canvas{
 }
 
 #rez-title {
-	position: absolute;
+/*	position: absolute;
 	font-weight: bold;
 	margin-top: -70px;
 	text-align: center;
@@ -116,28 +111,28 @@ canvas{
 	color: rgb(90, 180, 165);
 	background-color: #cbcbcb;
     border: 1px solid black;
-    padding: 14px;
+    padding: 14px;*/
 }
 
 #results {
     position: absolute;
-/*    margin-left: -105%;*/
-    margin-top: 40px;
+    margin-top: 90px;
+    margin-left: 5%;
     font-size: 12px;
-}}
+}
 
 #results-table {
-	width: 50%;
+	width: 60%;
 	margin: 0% 2% 5% 2%;
-    height: 10%;
-    font-size: 11px;
+    height: 20%;
+    font-size: 13px;
     border: 1px solid grey;
 }
 
 #results-table tr:first-child td {
 	font-weight: bold;
-	font-size: 15px;
-	/*padding: 15px 15px 15px 20px;*/
+	font-size: 18px;
+	padding: 10px;
 	background-color: #cbcbcb;
 	border: 1px solid grey;
 	color: rgb(90, 180, 165);
@@ -175,14 +170,12 @@ canvas{
 #results-table tr:nth-child(3), tr:nth-child(4), tr:last-child{
 	background-color: #f2f2f2;
 	border: 1px solid grey;
-/*	border-top: 1px solid grey;;*/
+	padding: 15px;
 }
 
 #results-table tr:nth-child(4) td{
 	padding: 10px;
 }
-
-/*.pure-table-striped tr:nth-child(2n-1) td*/
 
 #each-joint {
 	font-size: 11px;
@@ -216,12 +209,12 @@ canvas{
   -moz-transform: translate(-50%, -50%);
   background-color: #F1F7F5;
   box-shadow: 4px 4px 80px #000;
+  border: 2px solid grey;
 }
 
 .ng-modal-dialog-content {
   padding:0px;
   text-align: center;
- /* background-color: pink;*/
 }
 
 .ng-modal-close {
@@ -236,12 +229,46 @@ canvas{
   font-family: 'arial', 'sans-serif';
 }
 
-/*#toggler {
-	margin-left: 0%;
+#tax-form-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 25px;
+  padding: 10px;
+  background-color: #cbcbcb;
+  color: rgb(90, 180, 165);
+}
+
+.tax-form-section {
+	text-align: left;
+	padding: 0px 20px 20px 20px;
+	font-size: 14px;
+}
+
+.tax-form-section input {
+	margin: 5px;
+	/*margin-left: 20%;*/
+}
+
+.tax-form-section:last-child p:last-child{
+	margin-left: 20%;
+}
+
+#toggler {
+	padding: 10px;
+}
+
+#next {
+	margin-left: 10px;
+}
+
+.partner-opt {
+	font-style: italic;
+	font-size: 11px;
 }
 
 
-table.center {
-	margin-left: auto;
-	margin-right: auto;
-}*/
+
+
+
+
+
