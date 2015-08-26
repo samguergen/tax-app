@@ -282,7 +282,7 @@ taxCtrl = function($scope){
     };
 
 
-    $scope.labels = [["Federal ($)", "fed blah"], ["State ($)", "state blah"], ["Medicare ($)", "medi blah"], ["FICA ($)", "fica blah"], ["Post-Tax Income ($)", "post blah"]];
+    $scope.labels = [["A tax levied by the United States Internal Revenue Service (IRS) on the annual earnings of individuals, corporations, trusts and other legal entities. Federal income taxes are applied on all forms of earnings that make up a taxpayer's taxable income, such as employment earnings or capital gains. source: Investopedia /\n/ Federal ($)"], ["Tax levied on income at the state level. State income taxes have their own set of deductions and credits that may be awarded for certain activities, such as contributing to a state-sponsored 529 plan. Taxpayers who itemized deductions on their federal returns may deduct state taxes paid on Schedule A. source: Investopedia /\n/ State ($)" ], ["Tax deducted from the wages of every legally working American that is used to pay for the Medicare program provided to individuals over the age of 65. source: InvestorWords /\n/ Medicare ($)"], ["A U.S. law requiring a deduction from paychecks and income that goes toward the Social Security program and Medicare. Both employees and employers are responsible for sharing the FICA payments. source: Investopedia /\n/ FICA ($)"], ["Your income after all the aforementioned taxes are deducted /\n/ Post-Tax Income ($)"]];
 
     $scope.data = [];
 
