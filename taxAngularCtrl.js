@@ -303,6 +303,7 @@ taxCtrl = function($scope){
      };
 
     $scope.nextModal = function(){
+        nextModal += 1
 
     };
 

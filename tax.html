@@ -31,62 +31,48 @@
         <div class="page-body">
             <button id="toggler" ng-click='toggleModal()'>Click here to enter your income information.</button>
             <modal-dialog show='modalShown' width='400px' height='60%'>
-                <form action="#" class="tax-form" >
+                
                  <!-- <div id="hover-form" ng-show="HoverFormisVisible"> Some details </div> -->
 
  
-            <table class="pure-table pure-table-horizontal" >
-                        <tbody id="personal-info">
-                        <tr>
-                            <td colspan="2" ng-mouseover="HoverFormisVisible=true" ng-mouseleave="HoverFormisVisible=false"> Enter your Income information </td>
-                        </tr>
-                        <tr> 
-                            <th>Filing Status</th>
-                            <td><input type="radio" ng-model="formData.filingChoice" ng-value="1"/> Single  
+                <div id="tax-form" ng-switch="nextModal()">
+                    <div id="tax-form-title">  Enter your Income information </div>
+  
+                    <div class="tax-form-section" ng-switch-when="nextSlide == 1"> Filing Status
+                            <br><input type="radio" ng-model="formData.filingChoice" ng-value="1"/> Single  
                             <br><input type="radio" ng-model="formData.filingChoice" ng-value="2"/> Joint 
-                            <br><input type="radio" ng-model="formData.filingChoice" ng-value="3"/> Separate </td>
-                        </tr>
-                        <tr>
-                            <th>Gross Income</th>
-                            <td> <input type="number" ng-model="formData.grossIncome" /> </td>
-                        </tr>
-                        <tr>
-                            <th>Adjusted Gross Income (AGI)</th>
-                            <td> <input type="number" ng-model="formData.agi" /> </td>
-                        </tr>
+                            <br><input type="radio" ng-model="formData.filingChoice" ng-value="3"/> Separate 
+                    </div>
+                        
+                    <div class="tax-form-section" ng-switch-when="nextSlide == 2"> Gross Income 
+                            <br><input type="number" ng-model="formData.grossIncome" />
+                            <br>Adjusted Gross Income (AGI)
+                            <br><input type="number" ng-model="formData.agi" />                    
+                    </div>
 
-                        <tr> 
-                            <th>U.S State of Residence</th>
-                            <td><input type="checkbox" ng-model="formData.state" /> New York </td>
-                        </tr>
-                    </tbody>
+                    <div class="tax-form-section" ng-switch-when="nextSlide == 3"> U.S State of Residence
+                            <br><input type="checkbox" ng-model="formData.state" /> New York
+                    </div>
+                    
+                    <div class="tax-form-section" ng-switch-when="nextSlide == 4">
+                        <!-- <tbody id="partner-info" ng-show="filingStatus() == 'joint'"> -->
+                                Partner's Gross Income
+                                <br><input type="number" ng-model="formData.partnerGrossIncome" />
+                    </div>
 
-                        <tbody id="partner-info" ng-show="filingStatus() == 'joint'">
-                            <tr>
-                                <th>Partner's Gross Income</th>
-                                <td> <input type="number" ng-model="formData.partnerGrossIncome" /> </td>
-                            </tr>
-                            <tr>
-                                <th>Partner's Adjusted Gross Income (AGI)</th>
-                                <td> <input type="number" ng-model="formData.partnerAgi" /> </td>
-                            </tr>    
-                        </tbody>                    
-
-                        <tr>
-                            <td colspan="2">
-                                <input class="form-click" type="button" ng-click="reset()" value="Reset"/>
+                    <div class="tax-form-section" ng-switch-when="nextSlide == 5"> Partner's Adjusted Gross Income (AGI)
+                                <br><input type="number" ng-model="formData.partnerAgi" />
+                    
+                            <!-- <td colspan="2">
+                                <input class="form-click" type="button" ng-click="reset()" value="Reset"/> -->
                                 
-                                <input class="form-click" type="button" ng-click="calculateTax()" value="Calculate Taxes"/>
-                            </td>
-                        </tr>          
+                                <input class="form-click" type="button" ng-click="calculateTax()" value="Calculate Taxes"/> 
+                    </div>         
 
-            </table>
-            </form>
 
             <button id="next" ng-click="nextModal()"> Next </button>
 
             </modal-dialog>
-             <!--     <div id="hover-form" ng-show="HoverFormisVisible"> Some details </div> -->
 
 
         <canvas id="pie" class="chart chart-pie" data="data"
@@ -94,7 +80,7 @@
         </canvas> 
 
 
-     	<div id="results" ng-show="showResultsTable">
+     <!-- 	<div id="results" ng-show="showResultsTable">
 				<table class="pure-table pure-table-striped center" >
                     <tbody id="results-table">
                     	<tr>
@@ -133,7 +119,7 @@
                             </tr> 
                         </tbody>   
 
-                </table>
+                </table> -->
     
      	</div>
 
