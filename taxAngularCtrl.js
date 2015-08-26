@@ -7,7 +7,7 @@ taxCtrl = function($scope){
     $scope.formData = {};
     $scope.fica_cap = 117000;
 
-    $scope.slide = 0;
+    $scope.slide = 1;
 
 
     $scope.reset = function(){
@@ -305,11 +305,11 @@ taxCtrl = function($scope){
      };
 
     $scope.nextModal = function(){
+        if ($scope.slide == 5){
+            $scope.slide = 1;
+        };
         $scope.slide += 1;
     };
-
-
-
   }
 
 
@@ -335,7 +335,7 @@ taxCtrl = function($scope){
         scope.show = false;
       };
     },
-    template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div><div class='ng-modal-next' ng-click='nextModal()'>next</div></div></div>"
+    template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
   };
 });
 
