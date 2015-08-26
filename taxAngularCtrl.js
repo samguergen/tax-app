@@ -291,11 +291,13 @@ taxCtrl = function($scope){
 
     };
 
+    
+
     $scope.labels = ["Federal", "State", "Medicare", "FICA", "Post-Tax Income"];
 
     $scope.data = [];
 
-    $scope.legend = ["this is a legend"];
+    // $scope.legend = ["this is a legend"];
 
 
     $scope.modalShown = false;
