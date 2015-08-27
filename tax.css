@@ -296,7 +296,7 @@ canvas{
 }
 
 #state-pop {
-	margin-left: 15%;
+	margin-left: 16%;
 	height: 150px;
 }
 
@@ -317,18 +317,28 @@ canvas{
 
 #fica-pop {
 	height: 110px;
-	margin-left: 27%;
+	margin-left: 28%;
 }
 
 #pe-pop {
 	height: 160px;
-	margin-left: 33%;
+	margin-left: 34%;
 }
 
 #post-pop {
 	height: 40px;
-	margin-left: 42%;
-	margin-top: -600px;
+	margin-left: 41%;
+	margin-top: -630px;
+}
+
+#post-pop:after {
+	left: -15px;
+	top: 28px;
+}
+
+#post-pop:before {
+	left: -18px;
+	top: 27px;
 }
 
 .source {
