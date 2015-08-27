@@ -256,11 +256,12 @@ canvas{
 
 .info-pop {
 	position: absolute;
+	font-size: 13px;
 	margin-top: -680px;
 	margin-left: 9%;
 	padding: 10px;
 	width: 250px;
-	height: 200px;
+	height: 150px;
 	background: #FFFFFF;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -302,29 +303,35 @@ canvas{
 
 #state-pop {
 	margin-left: 15%;
+	height: 150px;
 }
 
 #med-pop {
-	height: 130px;
+	height: 80px;
 	margin-left: 21%;
 }
 
 #fica-pop {
-	height: 150px;
+	height: 130px;
 	margin-left: 27%;
 }
 
 #pe-pop {
-	height: 220px;
+	height: 180px;
 	margin-left: 33%;
 }
 
 #post-pop {
 	height: 40px;
-	margin-left: 39%;
+	margin-left: 42%;
 }
 
-
+.source {
+	font-style: italic;
+	text-align: right;
+	font-size: 11px;
+	padding: 5px 10px 10px 10px;
+}
 
 
 
