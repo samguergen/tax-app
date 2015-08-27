@@ -295,12 +295,6 @@ canvas{
 	top: 73px;
 }
 
-
-
-#fed-pop {
-
-}
-
 #state-pop {
 	margin-left: 15%;
 	height: 150px;
@@ -311,19 +305,30 @@ canvas{
 	margin-left: 21%;
 }
 
+#med-pop:after {
+ 	left: -15px;
+	top: 65px;
+}
+
+#med-pop:before {
+	left: -18px;
+	top: 64px;
+}
+
 #fica-pop {
-	height: 130px;
+	height: 110px;
 	margin-left: 27%;
 }
 
 #pe-pop {
-	height: 180px;
+	height: 160px;
 	margin-left: 33%;
 }
 
 #post-pop {
 	height: 40px;
 	margin-left: 42%;
+	margin-top: -600px;
 }
 
 .source {
