@@ -87,8 +87,9 @@
 
 
         <canvas id="pie" class="chart chart-pie" data="data"
-          labels="labels" legend:true> 
+          labels="labels" legend:true > 
         </canvas> 
+
 
 
      	<div id="results" ng-show="showResultsTable">
@@ -98,12 +99,12 @@
                     		<td colspan="6">Your Tax Details</td>
                     	</tr>
                         <tr>
-                            <th>Federal Tax</th>
-                            <th>State Tax</th>
-                            <th>Medicare Tax</th>
-                            <th>FICA Tax</th>
-                            <th>Personal Exemption</th>
-                            <th>Post-Tax Income</th>     
+                            <th ng-mouseover="onFedFunc()" ng-mouseleave="onFedHover = false">Federal Tax</th>
+                            <th ng-mouseover="onStateHover = true" ng-mouseleave="onStateHover = false">State Tax</th>
+                            <th ng-mouseover="onMedHover = true" ng-mouseleave="onMedHover = false">Medicare Tax</th>
+                            <th ng-mouseover="onFicaHover = true" ng-mouseleave="onFicaHover = false">FICA Tax</th>
+                            <th ng-mouseover="onPeHover = true" ng-mouseleave="onPeHover = false">Personal Exemption</th>
+                            <th ng-mouseover="onPostHover = true" ng-mouseleave="onPostHover = false">Post-Tax Income</th>     
                         </tr>
 
                         <tr>
@@ -134,7 +135,36 @@
     
      	</div>
 
-</div>
+        <div id="fed-pop" class="info-pop" ng-show="onFedHover"> 
+            "A tax levied by the United States Internal Revenue Service (IRS) on the annual earnings of individuals, corporations, trusts and other legal entities. 
+            <br> Federal income taxes are applied on all forms of earnings that make up a taxpayer's taxable income, such as employment earnings or capital gains."" 
+            <br><div class="source"> source: Investopedia</div>
+        </div>
+        <div id="state-pop" class="info-pop" ng-show="onStateHover"> 
+            "Tax levied on income at the state level. State income taxes have their own set of deductions and credits that may be awarded for certain activities, such as contributing to a state-sponsored 529 plan. 
+            <br> Taxpayers who itemized deductions on their federal returns may deduct state taxes paid on Schedule A."
+            <br><div class="source"> source: Investopedia</div>
+        </div>
+        <div id="med-pop" class="info-pop" ng-show="onMedHover"> 
+            "Tax deducted from the wages of every legally working American that is used to pay for the Medicare program provided to individuals over the age of 65." 
+            <br><div class="source"> source: Investorwords</div>
+        </div>
+        <div id="fica-pop" class="info-pop" ng-show="onFicaHover"> 
+            "A U.S. law requiring a deduction from paychecks and income that goes toward the Social Security program and Medicare. 
+            <br> Both employees and employers are responsible for sharing the FICA payments."
+            <br><div class="source"> source: Investopedia</div>
+        </div>
+        <div id="pe-pop" class="info-pop" ng-show="onPeHover"> 
+            "The dollar amount that each individual taxpayer is able to deduct for him or herself or a dependent each year. 
+            <br> A separate personal exemption is accorded to every man, woman and child in the U.S. that must file a return. 
+            <br> For example the amount of the personal exemption was $3,700 in 2011 and $3,800 in 2012."
+            <br><div class="source"> source: Investopedia</div>
+        </div>
+        <div id="post-pop" class="info-pop" ng-show="onPostHover"> 
+            Your income after all the aforementioned taxes are deducted. 
+        </div>
+
+    </div>
 
 	<div class="footer">
 	</div>
