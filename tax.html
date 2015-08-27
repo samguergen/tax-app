@@ -5,7 +5,11 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script>
+    <script src="bower_components/angular-slider/build/angular-slider.min.js"></script>
 
     <script src="bower_components/Chart.js/Chart.js"></script>
     <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
@@ -30,6 +34,20 @@
 
         <div class="page-body">
             <button id="toggler" ng-click='toggleModal()'>Click here to enter your income information</button>
+
+
+
+            <div
+    slider
+    style="width: 30%"
+    ng-model="formData.grossIncome"
+    floor="0.00"
+    ceiling="500000.00"
+    step="0.01"
+    precision="10"
+    stretch="1">
+</div>
+
             <modal-dialog show='modalShown' width='400px' height='60%'>
                 
                  <!-- <div id="hover-form" ng-show="HoverFormisVisible"> Some details </div> -->
@@ -47,7 +65,8 @@
                         
                     <div class="tax-form-section" ng-show="slide == 2">
                         <b> 2. Gross Income </b>
-                        <p><input type="number" ng-model="formData.grossIncome" /></p>
+                        <!-- <p><input type="number" ng-model="formData.grossIncome" /></p> -->
+                        
                     </div>
                             
                     <div class="tax-form-section" ng-show="slide == 3">

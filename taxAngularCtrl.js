@@ -1,4 +1,4 @@
-var app = angular.module("taxApp", ["chart.js"]);
+var app = angular.module("taxApp", ['vr.directives.slider', 'chart.js']);
 
 
 taxCtrl = function($scope){
