@@ -303,16 +303,17 @@ canvas{
 #med-pop {
 	height: 80px;
 	margin-left: 21%;
+	margin-top: -660px;
 }
 
 #med-pop:after {
  	left: -15px;
-	top: 65px;
+	top: 59px;
 }
 
 #med-pop:before {
 	left: -18px;
-	top: 64px;
+	top: 58px;
 }
 
 #fica-pop {
