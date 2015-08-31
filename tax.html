@@ -7,10 +7,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 
-<!--      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
-     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script> -->
-
-     <link rel="stylesheet" href="angular-slider/angular-slider.css">
+    <link rel="stylesheet" href="angular-slider/angular-slider.css">
     <script src="angular-slider/angular-slider.js"></script>
     
 
@@ -39,20 +36,9 @@
         <div class="page-body">
             <button id="toggler" ng-click='toggleModal()'>Click here to enter your income information</button>
 
+            <slider floor="1000" ceiling="1000000" step="1000" precision="0" ng-model="formData.grossIncome"></slider>
 
-            <slider floor="100" ceiling="1000" step="50" precision="2" ng-model="formData.grossIncome"></slider>
-
-
-
-<!--             <div
-    slider
-    ng-model="formData.grossIncome"
-    floor="0.00"
-    ceiling="500000.00"
-    step="1000.00"
-    precision="1"
-    stretch="1">
-</div> -->
+            <br>{{formData.grossIncome}}
 
             <modal-dialog show='modalShown' width='400px' height='60%'>
                 
@@ -71,6 +57,7 @@
                         
                     <div class="tax-form-section" ng-show="slide == 2">
                         <b> 2. Gross Income </b>
+                        <!-- <slider floor="1000" ceiling="1000000" step="50" precision="2" ng-model="formData.grossIncome"></slider> -->
                         <!-- <p><input type="number" ng-model="formData.grossIncome" /></p> -->
                         
                     </div>
