@@ -5,13 +5,17 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script>
-    <script src="bower_components/angular-slider/build/angular-slider.min.js"></script>
+<!--      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script> -->
+
+     <script src="angular-slider/angular-slider.css"></script>
+    <script src="angular-slider/angular-slider.js"></script>
+    
 
     <script src="bower_components/Chart.js/Chart.js"></script>
+    
     <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
     <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
 
@@ -36,8 +40,11 @@
             <button id="toggler" ng-click='toggleModal()'>Click here to enter your income information</button>
 
 
+            <slider floor="100" ceiling="1000" step="50" precision="2" ng-model="formData.grossIncome"></slider>
 
-            <div
+
+
+<!--             <div
     slider
     ng-model="formData.grossIncome"
     floor="0.00"
@@ -45,7 +52,7 @@
     step="1000.00"
     precision="1"
     stretch="1">
-</div>
+</div> -->
 
             <modal-dialog show='modalShown' width='400px' height='60%'>
                 
