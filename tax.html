@@ -7,7 +7,12 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 
+    <link rel="stylesheet" href="angular-slider/angular-slider.css">
+    <script src="angular-slider/angular-slider.js"></script>
+    
+
     <script src="bower_components/Chart.js/Chart.js"></script>
+    
     <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
     <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
 
@@ -30,10 +35,10 @@
 
         <div class="page-body">
             <button id="toggler" ng-click='toggleModal()'>Click here to enter your income information</button>
+
+
             <modal-dialog show='modalShown' width='400px' height='60%'>
                 
-                 <!-- <div id="hover-form" ng-show="HoverFormisVisible"> Some details </div> -->
-
  
                 <div id="tax-form">
                     <div id="tax-form-title">  Your Income Information </div>
@@ -47,7 +52,10 @@
                         
                     <div class="tax-form-section" ng-show="slide == 2">
                         <b> 2. Gross Income </b>
+<!--                         <p><slider floor="1000" ceiling="1000000" step="1000" precision="0" ng-model="formData.grossIncome"></slider></p> -->
+
                         <p><input type="number" ng-model="formData.grossIncome" /></p>
+                        
                     </div>
                             
                     <div class="tax-form-section" ng-show="slide == 3">

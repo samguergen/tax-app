@@ -257,7 +257,7 @@ canvas{
 .info-pop {
 	position: absolute;
 	font-size: 13px;
-	margin-top: -680px;
+	margin-top: -600px;
 	margin-left: 9%;
 	padding: 10px;
 	width: 250px;
@@ -303,7 +303,7 @@ canvas{
 #med-pop {
 	height: 80px;
 	margin-left: 21%;
-	margin-top: -660px;
+	margin-top: -580px;
 }
 
 #med-pop:after {
@@ -348,6 +348,8 @@ canvas{
 	font-size: 11px;
 	padding: 5px 10px 10px 10px;
 }
+
+
 
 
 
