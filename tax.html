@@ -36,14 +36,9 @@
         <div class="page-body">
             <button id="toggler" ng-click='toggleModal()'>Click here to enter your income information</button>
 
-            <p><slider floor="1000" ceiling="1000000" step="1000" precision="0" ng-model="formData.grossIncome"></slider></p>
-
-            <br>{{formData.grossIncome}}
 
             <modal-dialog show='modalShown' width='400px' height='60%'>
                 
-                 <!-- <div id="hover-form" ng-show="HoverFormisVisible"> Some details </div> -->
-
  
                 <div id="tax-form">
                     <div id="tax-form-title">  Your Income Information </div>
@@ -57,10 +52,9 @@
                         
                     <div class="tax-form-section" ng-show="slide == 2">
                         <b> 2. Gross Income </b>
-<!--                         <p><slider floor="1000" ceiling="1000000" step="1000" precision="0" ng-model="formData.grossIncome"></slider></p>
+<!--                         <p><slider floor="1000" ceiling="1000000" step="1000" precision="0" ng-model="formData.grossIncome"></slider></p> -->
 
-                        <br>{{formData.grossIncome}} -->
-                        <!-- <p><input type="number" ng-model="formData.grossIncome" /></p> -->
+                        <p><input type="number" ng-model="formData.grossIncome" /></p>
                         
                     </div>
                             
